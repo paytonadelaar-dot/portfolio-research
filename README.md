@@ -1,12 +1,12 @@
 # Portfolio Research: Does Optimization Survive a More Realistic Backtest?
 
-A reproducible, Python study of five portfolio construction rules versus SPY, using monthly walk-forward estimation, explicit holdings drift, transaction costs and constrained optimization.
+A reproducible Python study of five portfolio construction rules versus SPY, using monthly walk-forward estimation, explicit holdings drift, transaction costs and constrained optimization.
 
 Main finding: the maximum-Sharpe rule earned the highest return in the primary test, but simple equal weighting had the higher realized Sharpe ratio. Minimum variance reduced drawdowns at the cost of return. More complex construction did not automatically deliver a better risk-adjusted result.
 
 ![Backtest results](outputs/performance.svg)
 
-Results at a glance
+## Results at a glance
 
 January 2, 2024–September 25, 2026 · 686 sessions · 33 monthly allocations · 504-session estimation window · 10 bps per dollar traded.
 
@@ -38,7 +38,6 @@ The maximum-Sharpe rule's Sharpe difference versus equal weight was −0.08, wit
 1. [Full results and limitations](outputs/RESULTS.md)
 2. [Methodology and model audit](METHODOLOGY.md)
 3. [Executed notebook walkthrough](portfolio_research.ipynb)
-4. [Interview discussion guide](INTERVIEW_GUIDE.md)
 
 ## Reproduce
 
@@ -91,4 +90,4 @@ AAPL, MSFT, NVDA, AMZN, GOOGL, META, JPM, BAC, XOM, CVX, JNJ, LLY, UNH, CAT, COS
 
 The project separates each optimizer's estimation data from subsequent returns, but that **does not eliminate hindsight in research design**. The universe includes surviving firms, sector labels are static, and the model was developed retrospectively. Costs are simplified; taxes, currency conversion and market impact are omitted. No terminal sale is charged. Caps apply at rebalances and may be exceeded through drift. A constant 4% risk-free assumption is used throughout.
 
-Built with AI assistance (OpenAI Codex). Code and results are included for inspection and reproduction; AI assistance is not a substitute for understanding or independent validation. Market data remains third-party material subject to its provider's terms.
+Code and results are included for inspection and reproduction. Market data remains third-party material subject to its provider's terms.

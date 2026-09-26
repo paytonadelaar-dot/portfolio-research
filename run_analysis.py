@@ -94,25 +94,6 @@ def plot_results(net,performance,latest,confidence,sensitivity,out):
     ax.hlines(y,c.lower_95,c.upper_95,color=COLORS[3],lw=3);ax.scatter(c.sharpe_difference,y,color='#0f172a',zorder=3);ax.axvline(0,color='#64748b',ls='--')
     ax.set_yticks(y,c.index);ax.set_xlabel('Sharpe difference versus equal weight');ax.set_title('Uncertainty matters: paired block-bootstrap 95% intervals',loc='left',fontweight='bold',fontsize=14)
     fig.tight_layout();fig.savefig(out/'uncertainty.svg');plt.close(fig)
-    # Shareable static research card; exact data, not AI-generated artwork.
-    fig=plt.figure(figsize=(12,13.5),facecolor='#0b1220');gs=fig.add_gridspec(3,1,height_ratios=[.55,1.7,1],left=.09,right=.95,top=.95,bottom=.12,hspace=.35)
-    title=fig.add_subplot(gs[0]);title.axis('off');title.text(0,.85,'PORTFOLIO RESEARCH',color='#22d3b0',fontsize=14,fontweight='bold')
-    title.text(0,.35,'Does optimization survive\na more realistic backtest?',color='white',fontsize=29,fontweight='bold',va='top')
-    ax=fig.add_subplot(gs[1],facecolor='#0b1220')
-    for name,color in [('Equal weight',COLORS[0]),('Min variance (shrinkage)',COLORS[3]),('Max Sharpe (shrinkage)',COLORS[4]),('SPY',COLORS[5])]:
-        r=net[name];ax.plot(r.index,10000*(1+r).cumprod(),label=name,color=color,lw=2.8)
-    ax.tick_params(colors='#cbd5e1');ax.yaxis.set_major_formatter(StrMethodFormatter('${x:,.0f}'));ax.set_title('Growth of $10,000 • after modeled trading costs',color='white',loc='left',fontsize=13,pad=16)
-    ax.legend(facecolor='#0b1220',labelcolor='white',edgecolor='none',fontsize=10,loc='upper left');ax.spines['left'].set_color('#334155');ax.spines['bottom'].set_color('#334155')
-    ax=fig.add_subplot(gs[2]);ax.axis('off')
-    names=['Equal weight','Min variance (shrinkage)','Max Sharpe (shrinkage)','SPY']
-    cells=[[n,f'{performance.loc[n,"cagr"]:.1%}',f'{performance.loc[n,"sharpe"]:.2f}',f'{performance.loc[n,"max_drawdown"]:.1%}'] for n in names]
-    table=ax.table(cellText=cells,colLabels=['Portfolio','CAGR','Sharpe','Max drawdown'],colWidths=[.49,.16,.15,.20],bbox=[0,.02,1,.88])
-    table.auto_set_font_size(False);table.set_fontsize(12)
-    for (row,col),cell in table.get_celld().items():
-        cell.set_facecolor('#122033' if row==0 else '#0b1220');cell.set_edgecolor('#334155');cell.set_text_props(color='#22d3b0' if row==0 else 'white',ha='left' if col==0 else 'center')
-    fig.text(.09,.075,f'{net.index[0]:%b %d, %Y} – {net.index[-1]:%b %d, %Y} | Monthly rebalancing | 10 bps per dollar traded',color='#cbd5e1',fontsize=11)
-    fig.text(.09,.044,'Retrospective, hindsight-selected universe. Hypothetical performance, not live returns.\n20 U.S. equities • 15% stock cap / 35% sector cap at rebalance • AI-assisted Python study',color='#94a3b8',fontsize=10,linespacing=1.6)
-    fig.savefig(out/'linkedin_research_card.png',dpi=120,facecolor=fig.get_facecolor());plt.close(fig)
 
 
 def write_report(perf,ci,sens,meta,out):
