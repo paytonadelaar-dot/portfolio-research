@@ -1,0 +1,36 @@
+{
+  "request": {
+    "tickers": [
+      "AAPL",
+      "MSFT",
+      "NVDA",
+      "AMZN",
+      "GOOGL",
+      "META",
+      "JPM",
+      "BAC",
+      "XOM",
+      "CVX",
+      "JNJ",
+      "LLY",
+      "UNH",
+      "CAT",
+      "COST",
+      "PG",
+      "KO",
+      "NEE",
+      "HD",
+      "DIS",
+      "SPY"
+    ],
+    "start": "2020-01-01",
+    "end_exclusive": "2026-09-26"
+  },
+  "source": "Yahoo Finance chart API; dividend/split-adjusted close",
+  "downloaded_at_utc": "2026-09-26T18:33:29.689782+00:00",
+  "first_date": "2020-01-02",
+  "last_date": "2026-09-25",
+  "rows": 1692,
+  "sha256": "6809c569dfa84c55747d42b9175427709f688a70eb0aac4fcbb895e854ea48fa",
+  "missing_value_policy": "Fail; no forward-filling or silently dropped sessions"
+}

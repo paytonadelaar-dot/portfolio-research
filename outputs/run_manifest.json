@@ -1,0 +1,26 @@
+{
+  "config": {
+    "start": "2020-01-01",
+    "end": "2026-09-26",
+    "test_start": "2024-01-01",
+    "lookback": 504,
+    "cost_bps": 10.0,
+    "risk_free": 0.04,
+    "stock_cap": 0.15,
+    "sector_cap": 0.35
+  },
+  "test_first": "2024-01-02",
+  "test_last": "2026-09-25",
+  "test_sessions": 686,
+  "rebalance_count": 33,
+  "snapshot_sha256": "6809c569dfa84c55747d42b9175427709f688a70eb0aac4fcbb895e854ea48fa",
+  "protocol_sha256": "1951a29139841bb606df5d164927f1cbb43ae1dab04e0731c6d385eec01b16f9",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0",
+    "matplotlib": "3.10.8"
+  }
+}

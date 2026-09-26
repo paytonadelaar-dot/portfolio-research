@@ -1,0 +1,13 @@
+{
+  "question": "Do constrained portfolio rules improve risk-adjusted performance after monthly rebalancing and transaction costs?",
+  "primary_lookback": 504,
+  "primary_cost_bps_per_dollar_traded": 10,
+  "test_start": "2024-01-01",
+  "end_exclusive": "2026-09-26",
+  "lookback_sensitivity": [252, 504, 756],
+  "cost_sensitivity_bps": [0, 5, 10, 25],
+  "annual_risk_free_assumption": 0.04,
+  "bootstrap": {"repetitions": 1000, "block_sessions": 21, "seed": 7},
+  "selection": "Report all rules; do not select a winner using sensitivity results.",
+  "status": "Retrospective study. Protocol written before this run, not preregistered; universe chosen with hindsight."
+}
