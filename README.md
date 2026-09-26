@@ -1,12 +1,12 @@
 # Portfolio Research: Does Optimization Survive a More Realistic Backtest?
 
-A reproducible, AI-assisted Python study of **five portfolio construction rules versus SPY**, using monthly walk-forward estimation, explicit holdings drift, transaction costs and constrained optimization.
+A reproducible, Python study of five portfolio construction rules versus SPY, using monthly walk-forward estimation, explicit holdings drift, transaction costs and constrained optimization.
 
-**Main finding:** the maximum-Sharpe rule earned the highest return in the primary test, but simple equal weighting had the higher realized Sharpe ratio. Minimum variance reduced drawdowns at the cost of return. More complex construction did not automatically deliver a better risk-adjusted result.
+Main finding: the maximum-Sharpe rule earned the highest return in the primary test, but simple equal weighting had the higher realized Sharpe ratio. Minimum variance reduced drawdowns at the cost of return. More complex construction did not automatically deliver a better risk-adjusted result.
 
 ![Backtest results](outputs/performance.svg)
 
-## Results at a glance
+Results at a glance
 
 January 2, 2024–September 25, 2026 · 686 sessions · 33 monthly allocations · 504-session estimation window · 10 bps per dollar traded.
 
