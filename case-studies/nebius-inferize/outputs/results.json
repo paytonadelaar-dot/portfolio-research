@@ -1,0 +1,69 @@
+{
+  "illustrative_base": {
+    "assumptions": {
+      "purchase_price": 125.0,
+      "integration_cost": 10.0,
+      "discount_rate": 0.12,
+      "ramp": [
+        0.25,
+        0.6,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "required_annual_run_rate_fcf_usd_m": 51.6004590607023,
+    "npv_usd_m": 0.0
+  },
+  "one_year_delay_fixed_year_5_end": {
+    "assumptions": {
+      "purchase_price": 125.0,
+      "integration_cost": 10.0,
+      "discount_rate": 0.12,
+      "ramp": [
+        0,
+        0.25,
+        0.6,
+        1.0,
+        1.0
+      ]
+    },
+    "required_annual_run_rate_fcf_usd_m": 73.79825477934611,
+    "npv_usd_m": 0.0
+  },
+  "one_year_delay_shifted_year_6_end": {
+    "assumptions": {
+      "purchase_price": 125.0,
+      "integration_cost": 10.0,
+      "discount_rate": 0.12,
+      "ramp": [
+        0,
+        0.25,
+        0.6,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "required_annual_run_rate_fcf_usd_m": 57.79251414798658,
+    "npv_usd_m": 0.0
+  },
+  "seven_year_benefit_horizon": {
+    "assumptions": {
+      "purchase_price": 125.0,
+      "integration_cost": 10.0,
+      "discount_rate": 0.12,
+      "ramp": [
+        0.25,
+        0.6,
+        1.0,
+        1.0,
+        1.0,
+        1,
+        1
+      ]
+    },
+    "required_annual_run_rate_fcf_usd_m": 37.7597437106122,
+    "npv_usd_m": 0.0
+  }
+}
